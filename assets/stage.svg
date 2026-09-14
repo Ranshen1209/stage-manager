@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+  <title>Stage Manager</title>
+  <!-- Flat, optically aligned window mark. This SVG is the only icon master. -->
+  <defs>
+    <!-- Tray variant: optically thin outlines at 16 px, with transparent centers. -->
+    <view id="tray-view" viewBox="18 19 91 91"/>
+    <mask id="tray-overlap" maskUnits="userSpaceOnUse" x="16" y="15" width="96" height="96">
+      <rect x="16" y="15" width="96" height="96" fill="white"/>
+      <rect x="43" y="23" width="68" height="57" rx="12" fill="black"/>
+    </mask>
+    <g id="tray-mark" fill="none" stroke-linejoin="round">
+      <rect x="23" y="58" width="57" height="41" rx="7" stroke="#9675AC" stroke-width="5.5" mask="url(#tray-overlap)"/>
+      <rect x="50" y="30" width="54" height="43" rx="5" stroke="#527F70" stroke-width="5.5"/>
+    </g>
+  </defs>
+  <rect id="tile" x="1" y="1" width="126" height="126" rx="29" fill="#F3F1E3"/>
+  <!-- Enlarge the mark around its optical center, preserving the original geometry. -->
+  <g id="window-mark" transform="translate(-12.8 -12.8) scale(1.2)">
+    <path d="M30 55H73C78.523 55 83 59.477 83 65V92C83 97.523 78.523 102 73 102H30C24.477 102 20 97.523 20 92V65C20 59.477 24.477 55 30 55Z" fill="#ADA0C0"/>
+    <path d="M30 64H73V92H30V64Z" fill="#F3F1E3"/>
+    <rect x="43" y="23" width="68" height="57" rx="12" fill="#F3F1E3"/>
+    <rect x="47" y="27" width="60" height="49" rx="8" fill="#7B9E93"/>
+    <path d="M55 41H99V65C99 67.209 97.209 69 95 69H59C56.791 69 55 67.209 55 65V41Z" fill="#F3F1E3"/>
+    <path d="M57 35H67" stroke="#F3F1E3" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>
