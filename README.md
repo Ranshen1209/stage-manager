@@ -46,7 +46,7 @@
 
 ## 开始使用
 
-当前版本为 **[0.3.5](https://github.com/Ranshen1209/stage-manager/releases/tag/v0.3.5)**，更新内容见 [版本记录](docs/changelog.zh-CN.md)。
+当前版本为 **[0.3.6](https://github.com/Ranshen1209/stage-manager/releases/tag/v0.3.6)**，更新内容见 [版本记录](docs/changelog.zh-CN.md)。
 
 1. 从 [Releases](https://github.com/Ranshen1209/stage-manager/releases/latest) 下载 `StageManager-…-win.zip`，解压到固定目录。
 2. 运行 `StageManager.exe`，检查“所有窗口”的识别结果。首次启动默认暂停。
@@ -66,7 +66,7 @@
 | `Ctrl + Alt + Left` | 上一组 |
 | `Ctrl + Alt + Backspace` | 紧急恢复布局 |
 
-在 **“设置 → 应用白名单”** 中添加文件管理器、消息工具等应用，也可右键窗口卡片或组内成员添加。白名单应用不会触发切组，也不会随其他组自动收起；初始列表为空，由你选择需要放行的应用。侧栏可以拖宽使用多列布局；侧栏禁止最大化，需要大视图时点击“展开总览”。
+在 **“设置 → 应用白名单”** 中添加文件管理器、消息工具等应用，也可右键窗口卡片或组内成员添加。白名单应用不会触发切组，也不会随其他组自动收起；初始列表为空，由你选择需要放行的应用；每条规则可重命名，名称修改后保留原有匹配范围。侧栏可以拖宽使用多列布局；侧栏禁止最大化，需要大视图时点击“展开总览”。
 
 ## 关于这个仓库
 
