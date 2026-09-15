@@ -46,7 +46,7 @@
 
 ## 开始使用
 
-当前版本为 **[0.3.3](https://github.com/Ranshen1209/stage-manager/releases/tag/v0.3.3)**，更新内容见 [版本记录](docs/changelog.zh-CN.md)。
+当前版本为 **[0.3.4](https://github.com/Ranshen1209/stage-manager/releases/tag/v0.3.4)**，更新内容见 [版本记录](docs/changelog.zh-CN.md)。
 
 1. 从 [Releases](https://github.com/Ranshen1209/stage-manager/releases/latest) 下载 `StageManager-…-win.zip`，解压到固定目录。
 2. 运行 `StageManager.exe`，检查“所有窗口”的识别结果。首次启动默认暂停。
