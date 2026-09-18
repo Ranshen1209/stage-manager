@@ -47,7 +47,7 @@
 
 ## 开始使用
 
-当前版本为 **[0.3.15](https://github.com/Ranshen1209/stage-manager/releases/tag/v0.3.15)**，更新内容见 [版本记录](docs/changelog.zh-CN.md)。
+当前版本为 **[0.3.16](https://github.com/Ranshen1209/stage-manager/releases/tag/v0.3.16)**，更新内容见 [版本记录](docs/changelog.zh-CN.md)。
 
 1. 从 [Releases](https://github.com/Ranshen1209/stage-manager/releases/latest) 下载 `StageManager-…-win.zip`，解压到固定目录。
 2. 运行 `StageManager.exe`，检查“所有窗口”的识别结果。首次启动默认暂停。
@@ -85,15 +85,15 @@
 
 公开 Release 分发编译后的应用、文档、图标、截图和校验文件。GitHub 自动生成的 Source code 压缩包对应本仓库的公开文档，不包含应用源码。
 
-本仓库不包含源码，自动构建需要由独立的私有源码仓库完成。发布包使用 Release 优化编译，并经过逻辑回归测试。
+源码已在本地 Git 中管理，不会推送至此公开仓库；自动构建配置供独立私有源码仓库使用。发布包使用 Release 优化编译，并强制经过名称混淆、字符串编码和压缩加壳，随后再次运行逻辑回归测试。保护可以增加逆向成本，不能保证无法还原。相关运行时代码许可见 [ConfuserEx 许可](docs/licenses/ConfuserEx.md)。
 
-下载后可用 `Get-FileHash .\StageManager-…-win.zip -Algorithm SHA256` 与 `SHA256SUMS.txt` 核对；包内 `BUILD-INFO.json` 记录版本、源码提交及 EXE 校验值。
+下载后可用 `Get-FileHash .\StageManager-…-win.zip -Algorithm SHA256` 与 `SHA256SUMS.txt` 核对；包内 `BUILD-INFO.json` 记录版本、源码提交、工作区状态、保护工具版本与配置校验值，以及 EXE 校验值。
 
 ## 测试与边界
 
 构建流程运行不依赖交互桌面的逻辑套件。完整回归还包括 WPF 界面、原生窗口、预览和桌面材质；GUI 测试仅操作自建窗口。混合 DPI、其他虚拟桌面等检查需要对应环境，不满足时明确标记 `SKIP`。
 
-0.3.15 通过 257 项逻辑测试、Release 构建和 XAML 静态检查，新增覆盖 4K / 150% 物理屏与 1080p / 100% 虚拟屏双向切换、大窗口收缩、可读尺寸优先、最大化保留、不同起点的连续往返及升级时纠正旧版过大布局。本版未运行窗口、真实游戏、DPI 切换或远程连接测试；实际效果受应用最小尺寸及显示驱动行为影响。
+0.3.16 的普通构建与混淆加壳后的 EXE 均通过 268 项逻辑测试，并完成 XAML 静态检查。新增覆盖最小化窗口主动适配、任务栏恢复、其他虚拟桌面、全屏避让、侧栏和总览尺寸基准、双向往返及重启、旧版设置和打包兼容性。按要求未运行窗口、真实 DPI 切换或远程连接测试；实际效果受应用最小尺寸及显示驱动行为影响。
 
 普通权限无法保证控制管理员或受保护窗口；最小化应用的预览可能暂停。模糊取决于 Windows 版本、透明效果策略和显卡环境。会话恢复只关联仍然存在的窗口，**不会重新启动已经关闭的应用，也不会在重启 Windows 后自动重开应用**。
 
